@@ -1,0 +1,240 @@
+@font-face {
+    font-family: 'avenir_regularregular';
+    src: url('../assets/fonts/avenir_regular-webfont.woff2') format('woff2'),
+        url('../assets/fonts/avenir_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'itc_avant_garde_gothic_proBd';
+    src: url('../assets/fonts/itcavantgardepro-bold-webfont.woff2') format('woff2'),
+        url('../assets/fonts/itcavantgardepro-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'avenir_regularregular';
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+    /* I'm stuck in a design dilemma here. If the designer wants the maximum width to remain 1440 pixels, this should be removed from the comment line. If you want it to take up the entire screen, it should remain in the comment line. */
+    /* max-width: 1440px; */
+    margin: 0 auto;
+}
+
+.main-container-left {
+    width: 50%;
+    background-image: url('../assets/main-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.main-container-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 120px;
+}
+
+.content-container {
+    width: 100%;
+}
+
+.content-header {
+    font-size: 31.25px;
+    line-height: 40.62px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-family: 'itc_avant_garde_gothic_proBd';
+}
+
+.content-desc {
+    font-size: 16px;
+    line-height: 25.6px;
+    font-weight: 400;
+    color: #666666;
+    margin-bottom: 32px;
+}
+
+.content-underline-text {
+    font-size: 12.8px;
+    line-height: 17.48px;
+    font-weight: 900;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 5px;
+    width: 146px;
+    margin-bottom: 68px;
+}
+
+.mySwiper {
+    height: 100%;
+}
+
+.swiper-button-next {
+    top: 156px !important;
+    right: 65px !important;
+    border: 1px solid #0000001A;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.swiper-button-next:after {
+    font-size: 16px !important;
+    color: black !important;
+}
+
+.swiper-button-prev {
+    top: 156px !important;
+    right: 65px !important;
+    border: 1px solid #0000001A;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.swiper-button-prev:after {
+    font-size: 16px !important;
+    color: black !important;
+}
+
+.swiper-button-disabled {
+    opacity: 0 !important;
+}
+
+.slide-item-img {
+    margin-bottom: 12px;
+}
+
+.slide-item-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide-item-name {
+    font-size: 12.8px;
+    line-height: 20.48px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.slide-item-price-color {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slide-item-price {
+    font-size: 12.8px;
+    line-height: 20.48px;
+    font-weight: bold;
+}
+
+.slide-item-color {
+    display: flex;
+}
+
+.color-circle-container {
+    margin-left: 8px;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.selected-circle {
+    border: 1px solid;
+}
+
+.selected-circle .color-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+}
+
+.color-circle-one {
+    background-color: #99c3cc;
+}
+
+.color-circle-two {
+    background-color: #CC9999;
+}
+
+.color-circle-three {
+    background-color: #CB99CC;
+}
+
+.color-circle-four {
+    background-color: #A6CC99;
+}
+
+@media (max-width: 1250px) {
+    main {
+        flex-direction: column;
+    }
+
+    .main-container-left {
+        width: 100%;
+        height: 437px;
+        background-position: initial;
+    }
+
+    .main-container-right {
+        padding-left: 24px;
+        width: 100%;
+        margin-top: -181px;
+    }
+
+    .content-header {
+        font-size: 20px;
+        line-height: 26px;
+        color: white;
+        margin-bottom: 16px;
+    }
+
+    .content-desc {
+        display: none;
+    }
+
+    .content-underline-text {
+        color: white;
+        border-bottom: 1px solid white;
+        margin-bottom: 32px;
+    }
+
+    .slide-item-price {
+        margin-bottom: 8px;
+    }
+
+    .slide-item-price-color {
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    .color-circle-container {
+        margin-left: initial;
+        margin-right: 8px;
+    }
+
+    .swiper-button-next {
+        display: none !important;
+    }
+
+    .swiper-button-prev {
+        display: none !important;
+    }
+}
